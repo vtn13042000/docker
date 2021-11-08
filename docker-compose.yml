@@ -26,7 +26,7 @@ services:
     container_name: docker-logbook-server
     restart: unless-stopped
     ports:
-      - 3000:8000
+      - 3333:8000
     environment:
       - DB_HOST=mysql
       - DB_NAME=logbook
@@ -46,7 +46,7 @@ services:
       - mysql
     container_name: docker-logbook-reverse-proxy
     ports:
-      - 80:80
+      - 20:80
     networks:
       - logbook-net
 
